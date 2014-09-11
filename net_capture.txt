@@ -1,0 +1,11 @@
+- dumpcap(wireshark) from user
+  setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
+  getcap /usr/bin/dumpcap
+
+- wireless capture
+  iw dev wlan0 interface add mon0 type monitor
+  ip link set mon0 up
+  tcpdump -ni mon0
+  dumpcap -i mon0 -b filesize:10240 -w hoge.pcap
+
+
