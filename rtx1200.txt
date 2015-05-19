@@ -1,0 +1,7 @@
+- IPv6
+  # YAMAHA RT シリーズの IPv6 設定
+  ipv6 prefix 1 fd75:f582:7ae3::/64 ← RAするプレフィックス(ULA)
+  ipv6 prefix 2 2001:278:101d::/64 ← RAするプレフィックス(GUA)
+  ipv6 lan1 prefix fd75:f582:7ae3::/64 ← LAN1のIPv6アドレス構成(ULA)
+  ipv6 lan1 prefix 2001:278:101d::/64 ← LAN1のIPv6アドレス構成(GUA)
+  ipv6 lan1 rtadv send 1 2 ← RA実装
